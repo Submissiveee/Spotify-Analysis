@@ -13,6 +13,7 @@
 
 
 ### Project Overview
+---
 
 This spotify analysis project is aim to understand global listening habits and surface actionable insights for playing curation, visualize the listening patterns by day/month and year , also analyze audio-feature trend (danceability,energy, etc.)
 
@@ -20,11 +21,13 @@ This spotify analysis project is aim to understand global listening habits and s
 
 
 ### Data Source
+---
 
 - Spotify Dataset: Track metadata and streaming counts (publicly available CSV) 
 [Onyx Data DataDNA Datatset Challenge - Spotify Most Streamed Songs 2023 Dataset - October 2023.xlsx](https://github.com/user-attachments/files/21170561/Onyx.Data.DataDNA.Datatset.Challenge.-.Spotify.Most.Streamed.Songs.2023.Dataset.-.October.2023.xlsx)
 
 ### Tools and Technologies
+---
 
 - ChatGPT: Auto-generating song-cover mockups each track
 - Python: Merging in external "display picture" URLs
@@ -33,25 +36,29 @@ This spotify analysis project is aim to understand global listening habits and s
            Report creation (Deneb for custom Vega-Lite visuals, Bravo for dynamic calender table)
 
 ### Exploratory Data Analysis
+---
 
 1. Average Streams per year: 514.14 million
 2. Top Streames song: "Blinding Light" by The Weeknd with 3,703,895,074 streams
 3. Lowest live stream: "Que Vuelvas" by Carin Leon & Grupo Frontera with 2,762 streams
 4. Energy % per track and other audio features (valence, speechiness, liveness, danceability, acousticness) calculated and visualized over release dates and calender periods.
 
-### Data Cleaning and Modeling 
+### Data Cleaning and Modeling
+---
 
 - Fixed data errors and missing values in power Query 
 - Merged in auto-generated cover-image URLs ( via Python) as a new column
 - Buit relationships between tracks, feature, and calender tables (Bravo)
 
 ### Data Analysis
+---
 
 - Seasonal streaming patterns: Grouped by month, day-of-week.
 - Feature trends over time: Valence, danceablility,etc., by release year
 - Top vs buttom deciles: Streams distribution comparism
 
 ### Deneb Challenge
+---
 
   I Spent almost an hour wrestling with a single Vega-Lite spec in Deneb Field mapping wouldn't align, extra "Track Formatted" fields kept appearing as undefined. In the end, renaming measures, stripping formatting, and switching to explicit field names (Month, Day of Week, _Track) cracked it.
 
@@ -193,11 +200,13 @@ This spotify analysis project is aim to understand global listening habits and s
 ```
 
 ### Results and Findings
+---
 
   - Weekly peaks: January, febuary and may show highest average streams.
   - Feature insights: Danceability strongly correlates with higher stream counts also acoustic tracks tend to peak in spring months.
  
 ### Reccomendations for Spotify
+---
 
 1. Feature-bases playlists: Curate "High Danceability" lists in summer months.
 2. Weekend campaigns : Promote new release on Saturdays and Sundays.
