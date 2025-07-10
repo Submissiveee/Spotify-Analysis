@@ -16,9 +16,13 @@
 
 This spotify analysis project is aim to understand global listening habits and surface actionable insights for playing curation, visualize the listening patterns by day/month and year , also analyze audio-feature trend (danceability,energy, etc.)
 
+![spotify overview](https://github.com/user-attachments/assets/29a1a5ba-7054-42ff-87f3-8a99e9bd7ca9)
+
+
 ### Data Source
 
-- Spotify Dataset: Track metadata and streaming counts (publicly available CSV) https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset
+- Spotify Dataset: Track metadata and streaming counts (publicly available CSV) 
+[Onyx Data DataDNA Datatset Challenge - Spotify Most Streamed Songs 2023 Dataset - October 2023.xlsx](https://github.com/user-attachments/files/21170561/Onyx.Data.DataDNA.Datatset.Challenge.-.Spotify.Most.Streamed.Songs.2023.Dataset.-.October.2023.xlsx)
 
 ### Tools and Technologies
 
@@ -47,17 +51,12 @@ This spotify analysis project is aim to understand global listening habits and s
 - Feature trends over time: Valence, danceablility,etc., by release year
 - Top vs buttom deciles: Streams distribution comparism
 
-  ```Python
-  # Example: merge cover URLs into main DataFrame
-import pandas as pd
+### Deneb Challenge
 
-df_spotify = pd.read_csv('spotify_data.csv')
-df_images  = pd.read_csv('cover_urls.csv')
-df = df_spotify.merge(df_images, on='track_id', how='left')
-```
-
-- Deneb Challenge
   I Spent almost an hour wrestling with a single Vega-Lite spec in Deneb Field mapping wouldn't align, extra "Track Formatted" fields kept appearing as undefined. In the end, renaming measures, stripping formatting, and switching to explicit field names (Month, Day of Week, _Track) cracked it.
+
+![SharedScreenshot](https://github.com/user-attachments/assets/f7ed8e0e-cd84-4845-b1d9-4c15b90f1846)
+
 
 ```Deneb Final Code
 {
